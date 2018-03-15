@@ -17,7 +17,12 @@ Solução mais rápida é instalar yarn (instruções [aqui](https://yarnpkg.com
 
 ### yarn start
 
-O comando `yarn start` falha. A solução sugerida parece bastante intrusiva/baixo nível:
+O comando `yarn start` falha. São sugeridas duas soluções:
+
+- Instalar o watchman (Não resolve o problema)
+- Executar snippets de configuração do Linux (Meio intrusivo/baixo nível)
+
+Mensagem de erro:
 
 ```
 $ react-native-scripts start
