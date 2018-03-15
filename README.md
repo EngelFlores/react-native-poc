@@ -1,5 +1,7 @@
 # react-native-poc
 
+Prova de conceito para entender possiveis problemas de React Native. 
+
 ### Criação do projeto
 
 Sugestão oficial de como começar um projeto:
@@ -17,10 +19,7 @@ Solução mais rápida é instalar yarn (instruções [aqui](https://yarnpkg.com
 
 ### yarn start
 
-O comando `yarn start` falha. São sugeridas duas soluções:
-
-- Instalar o watchman (Não resolve o problema)
-- Executar snippets de configuração do Linux (Meio intrusivo/baixo nível)
+O comando `yarn start` falha (executado no Ubuntu 17.10). 
 
 Mensagem de erro:
 
@@ -41,4 +40,16 @@ Output:
 ".
 ```
 
-Comando executado no Ubuntu 17.10.
+São sugeridas duas soluções:
+
+~~Instalar o watchman~~ 
+> Não resolve o problema.
+
+Executar snippets de configuração do Linux (Meio intrusivo/baixo nível):
+
+```
+    sudo sysctl -w fs.inotify.max_user_instances=1024
+    sudo sysctl -w fs.inotify.max_user_watches=12288
+```
+
+Resolve o problema
